@@ -760,8 +760,8 @@ class FluxImg2ImgPipeline(DiffusionPipeline, FluxLoraLoaderMixin, FromSingleFile
                     joint_attention_kwargs=self.joint_attention_kwargs,
                     return_dict=False,
                 )[0]
-                if (i <= zero_steps) and use_zero_init:
-                    noise_pred = noise_pred*0.
+                # if (i <= zero_steps) and use_zero_init:
+                #     noise_pred = noise_pred*0.
 
 
                 # compute the previous noisy sample x_t -> x_t-1
